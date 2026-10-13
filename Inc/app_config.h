@@ -68,7 +68,7 @@
 //  <0=> DISABLE
 //  <1=> ENABLE
 #define ENABLE_RTOS_MONITOR                 1
-
+//是否打开任务监视器
 // <o> FREERTOS_MAX_PRIORITY
 //  <i> used to define priority of monitor task
 //  <1-10:1>
