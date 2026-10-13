@@ -1,0 +1,42 @@
+./objects/netdb.o: \
+  ..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\api\netdb.c \
+  ..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\netdb.h \
+  ..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\opt.h \
+  ..\..\..\common\lwip_port\lwipopts.h \
+  ..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\arch.h \
+  ..\..\..\common\lwip_port\arch\cc.h \
+  ..\..\..\..\components\drivers\cmsis\cmsis_compiler.h \
+  ..\..\..\..\components\drivers\cmsis\cmsis_armclang.h \
+  ..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\debug.h \
+  ..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\inet.h \
+  ..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\def.h \
+  ..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\ip_addr.h \
+  ..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\ip4_addr.h \
+  ..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\ip6_addr.h \
+  ..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\sockets.h \
+  ..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\netif.h \
+  ..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\err.h \
+  ..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\pbuf.h \
+  ..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\stats.h \
+  ..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\mem.h \
+  ..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\memp.h \
+  ..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\priv\memp_std.h \
+  ..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\priv\memp_priv.h \
+  ..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\priv\mem_priv.h \
+  ..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\errno.h \
+  ..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\api.h \
+  ..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\netbuf.h \
+  ..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\sys.h \
+  ..\..\..\common\lwip_port\arch\sys_arch.h \
+  ..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h \
+  ..\Inc\FreeRTOSConfig.h ..\Inc\app_config.h \
+  ..\..\..\..\components\modules\FreeRTOS\include\projdefs.h \
+  ..\..\..\..\components\modules\FreeRTOS\include\portable.h \
+  ..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h \
+  ..\..\..\..\components\modules\FreeRTOS\portable\ARMv8M\non_secure\portable\GCC\ARM_CM33_NTZ\portmacro.h \
+  ..\..\..\..\components\modules\FreeRTOS\include\mpu_wrappers.h \
+  ..\..\..\..\components\modules\FreeRTOS\include\task.h \
+  ..\..\..\..\components\modules\FreeRTOS\include\list.h \
+  ..\..\..\..\components\modules\FreeRTOS\include\semphr.h \
+  ..\..\..\..\components\modules\FreeRTOS\include\queue.h \
+  ..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\dns.h

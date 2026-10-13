@@ -1,0 +1,205 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 EXPORT           low_power_save_cpu
+    2 00000000                 EXPORT           low_power_restore_cpu
+    3 00000000                 IMPORT           low_power_enter_sleep
+    4 00000000         
+    5 00000000         ;ret
+    6 00000000         ;msp
+    7 00000000         ;psp
+    8 00000000         ;control
+    9 00000000         ;msplim
+   10 00000000         ;psplim
+   11 00000000 00000018 
+                       low_power_store_size
+                               EQU              0x00000018
+   12 00000000         
+   13 00000000                 AREA             |.bss|, NOINIT, READWRITE, ALIG
+N=3
+   14 00000000         low_power_store_addr
+   15 00000000         low_power_store_buffer
+                               SPACE            low_power_store_size
+   16 00000018         
+   17 00000018                 AREA             |ram_code|, CODE, READONLY, ALI
+GN=2
+   18 00000000                 PRESERVE8
+   19 00000000         
+   20 00000000         low_power_save_cpu
+   21 00000000 E92D 5FFF       push             {r0-r12, lr}
+   22 00000004 F3EF 8011       mrs              r0, BASEPRI
+   23 00000008 F3EF 8110       mrs              r1, PRIMASK
+   24 0000000C F3EF 8213       mrs              r2, FAULTMASK
+   25 00000010 F3EF 8314       mrs              r3, CONTROL
+   26 00000014 F3EF 8400       mrs              r4, APSR
+   27 00000018 F3EF 8506       mrs              r5, EPSR
+   28 0000001C F3EF 8605       mrs              r6, IPSR
+   29 00000020 B47F            push             {r0-r6}
+   30 00000022         
+   31 00000022 491D            ldr              r1, =low_power_store_addr
+   32 00000024 F3EF 8208       mrs              r2, msp
+   33 00000028 600A            str              r2, [r1]
+   34 0000002A F3EF 8209       mrs              r2, psp
+   35 0000002E 604A            str              r2, [r1, #4]
+   36 00000030 F3EF 8214       mrs              r2, CONTROL
+   37 00000034 608A            str              r2, [r1, #8]
+   38 00000036 4A19            ldr              r2, =ret
+   39 00000038 F042 0201       orr              r2, r2, #1
+   40 0000003C 60CA            str              r2, [r1, #12]
+   41 0000003E F3EF 820A       mrs              r2, msplim
+   42 00000042 610A            str              r2, [r1, #16]
+   43 00000044 F3EF 820B       mrs              r2, psplim
+   44 00000048 614A            str              r2, [r1, #20]
+   45 0000004A         
+   46 0000004A F7FF FFFE       bl               low_power_enter_sleep
+   47 0000004E E7FE            b                .
+   48 00000050         
+   49 00000050         ret
+   50 00000050 4911            ldr              r1, =low_power_store_addr
+   51 00000052 680A            ldr              r2, [r1]
+   52 00000054 F382 8808       msr              msp, r2
+   53 00000058 684A            ldr              r2, [r1, #4]
+   54 0000005A F382 8809       msr              psp, r2
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   55 0000005E 688A            ldr              r2, [r1, #8]
+   56 00000060 F382 8814       msr              CONTROL, r2
+   57 00000064 690A            ldr              r2, [r1, #16]
+   58 00000066 F382 880A       msr              msplim, r2
+   59 0000006A 694A            ldr              r2, [r1, #20]
+   60 0000006C F382 880B       msr              psplim, r2
+   61 00000070         
+   62 00000070 BC7F            pop              {r0-r6}
+   63 00000072 F380 8811       msr              BASEPRI, r0
+   64 00000076 F381 8810       msr              PRIMASK, r1
+   65 0000007A F382 8813       msr              FAULTMASK, r2
+   66 0000007E F383 8814       msr              CONTROL, r3
+   67 00000082 F384 8800       msr              APSR_nzcvq, r4
+   68 00000086 F385 8806       msr              EPSR, r5
+   69 0000008A F386 8805       msr              IPSR, r6
+   70 0000008E         
+   71 0000008E E8BD 9FFF       pop              {r0-r12, pc}
+   72 00000092         
+   73 00000092         low_power_restore_cpu
+   74 00000092 4901            ldr              r1, =low_power_store_addr
+   75 00000094 68C9            ldr              r1, [r1,#12]
+   76 00000096 4708            bx               r1
+   77 00000098         
+   78 00000098                 END
+              00000000 
+              00000000 
+Command Line: --debug --xref --diag_suppress=9931,A1950W --cpu=Cortex-M33 --fpu
+=FPv5-SP --depend=.\objects\cpu_context.d -o.\objects\cpu_context.o -I.\RTE\_Pr
+oject -IDevice\ARM\ARMCM33\Include --predefine="__MICROLIB SETA 1" --predefine=
+"__UVISION_VERSION SETA 543" --predefine="_RTE_ SETA 1" --list=.\listings\cpu_c
+ontext.lst ..\..\..\..\components\modules\FreeRTOS\cpu_context.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.bss 00000000
+
+Symbol: .bss
+   Definitions
+      At line 13 in file ..\..\..\..\components\modules\FreeRTOS\cpu_context.s
+   Uses
+      None
+Comment: .bss unused
+low_power_store_addr 00000000
+
+Symbol: low_power_store_addr
+   Definitions
+      At line 14 in file ..\..\..\..\components\modules\FreeRTOS\cpu_context.s
+   Uses
+      At line 31 in file ..\..\..\..\components\modules\FreeRTOS\cpu_context.s
+      At line 50 in file ..\..\..\..\components\modules\FreeRTOS\cpu_context.s
+      At line 74 in file ..\..\..\..\components\modules\FreeRTOS\cpu_context.s
+
+low_power_store_buffer 00000000
+
+Symbol: low_power_store_buffer
+   Definitions
+      At line 15 in file ..\..\..\..\components\modules\FreeRTOS\cpu_context.s
+   Uses
+      None
+Comment: low_power_store_buffer unused
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+low_power_restore_cpu 00000092
+
+Symbol: low_power_restore_cpu
+   Definitions
+      At line 73 in file ..\..\..\..\components\modules\FreeRTOS\cpu_context.s
+   Uses
+      At line 2 in file ..\..\..\..\components\modules\FreeRTOS\cpu_context.s
+Comment: low_power_restore_cpu used once
+low_power_save_cpu 00000000
+
+Symbol: low_power_save_cpu
+   Definitions
+      At line 20 in file ..\..\..\..\components\modules\FreeRTOS\cpu_context.s
+   Uses
+      At line 1 in file ..\..\..\..\components\modules\FreeRTOS\cpu_context.s
+Comment: low_power_save_cpu used once
+ram_code 00000000
+
+Symbol: ram_code
+   Definitions
+      At line 17 in file ..\..\..\..\components\modules\FreeRTOS\cpu_context.s
+   Uses
+      None
+Comment: ram_code unused
+ret 00000050
+
+Symbol: ret
+   Definitions
+      At line 49 in file ..\..\..\..\components\modules\FreeRTOS\cpu_context.s
+   Uses
+      At line 38 in file ..\..\..\..\components\modules\FreeRTOS\cpu_context.s
+Comment: ret used once
+4 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+low_power_store_size 00000018
+
+Symbol: low_power_store_size
+   Definitions
+      At line 11 in file ..\..\..\..\components\modules\FreeRTOS\cpu_context.s
+   Uses
+      At line 15 in file ..\..\..\..\components\modules\FreeRTOS\cpu_context.s
+Comment: low_power_store_size used once
+1 symbol
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+low_power_enter_sleep 00000000
+
+Symbol: low_power_enter_sleep
+   Definitions
+      At line 3 in file ..\..\..\..\components\modules\FreeRTOS\cpu_context.s
+   Uses
+      At line 46 in file ..\..\..\..\components\modules\FreeRTOS\cpu_context.s
+Comment: low_power_enter_sleep used once
+1 symbol
+345 symbols in table
