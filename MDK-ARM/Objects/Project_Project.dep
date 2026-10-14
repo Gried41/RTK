@@ -1,7 +1,7 @@
 Dependencies for Project 'Project', Target 'Project': (DO NOT MODIFY !)
 CompilerVersion: 6240000::V6.24::ARMCLANG
 F (..\..\..\..\components\drivers\cmsis\core_cm33.h)(0x6A1AF74E)()
-F (..\Src\main.c)(0x6ACDE048)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../components/btdm/include -I ../../../../components/drivers/cmsis -I ../../../../components/drivers/device/fr30xx -I ../../../../components/drivers/peripheral/Inc -I ../../../../components/modules/common/include -I ../../../../components/modules/FlashDB/flashdb/inc -I ../../../../components/modules/FlashDB/port/fal/inc -I ../../../../components/modules/FreeRTOS/include -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure/portable/GCC/ARM_CM33_NTZ -I ../../../../components/modules/heap -I ../../../common/btdm -I ../../../common/flashdb -I ../Inc -I ../Src -I ../Src/SWD -I ../../../../components/modules/crc -I ../../../../components/modules/lwip-STABLE-2_1_3_RELEASE/src/include -I ../../../common/lwip_port -I ../../../common/lwip_port/arch -I ../../../../components/modules/audio -I ../../../../components/modules/audio/algorithm -I ../../../../components/modules/audio/codec -I ../../../../components/modules/audio/resample -I ../../../../components/modules/rpmsg-lite/lib/include -I ../../../../components/modules/rpmsg-lite/lib/include/platform/fr30xx_m33 -I ../../../../components/modules/dsp -I ../../../../components/modules/ext_flash_program -I ../../../common/btdm/profile/ble_hid -I ../../../common/btdm/profile/ble_simple_gatt -I ../../../common/btdm/profile/ble_ANCS_AMCS -I ../../../../components/drivers/bsp/psram-I./RTE/_Project-IDevice/ARM/ARMCM33/Include-D__UVISION_VERSION="543" -D_RTE_-o ./objects/main.o -MMD)
+F (..\Src\main.c)(0x6ACF2DFD)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../components/btdm/include -I ../../../../components/drivers/cmsis -I ../../../../components/drivers/device/fr30xx -I ../../../../components/drivers/peripheral/Inc -I ../../../../components/modules/common/include -I ../../../../components/modules/FlashDB/flashdb/inc -I ../../../../components/modules/FlashDB/port/fal/inc -I ../../../../components/modules/FreeRTOS/include -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure/portable/GCC/ARM_CM33_NTZ -I ../../../../components/modules/heap -I ../../../common/btdm -I ../../../common/flashdb -I ../Inc -I ../Src -I ../Src/SWD -I ../../../../components/modules/crc -I ../../../../components/modules/lwip-STABLE-2_1_3_RELEASE/src/include -I ../../../common/lwip_port -I ../../../common/lwip_port/arch -I ../../../../components/modules/audio -I ../../../../components/modules/audio/algorithm -I ../../../../components/modules/audio/codec -I ../../../../components/modules/audio/resample -I ../../../../components/modules/rpmsg-lite/lib/include -I ../../../../components/modules/rpmsg-lite/lib/include/platform/fr30xx_m33 -I ../../../../components/modules/dsp -I ../../../../components/modules/ext_flash_program -I ../../../common/btdm/profile/ble_hid -I ../../../common/btdm/profile/ble_simple_gatt -I ../../../common/btdm/profile/ble_ANCS_AMCS -I ../../../../components/drivers/bsp/psram-I./RTE/_Project-IDevice/ARM/ARMCM33/Include-D__UVISION_VERSION="543" -D_RTE_-o ./objects/main.o -MMD)
 I (..\..\..\..\components\drivers\device\fr30xx\fr30xx.h)(0x6A1AF74E)
 I (..\..\..\..\components\drivers\cmsis\core_cm33.h)(0x6A1AF74E)
 I (..\..\..\..\components\drivers\peripheral\Inc\driver_common.h)(0x6A1AF74E)
@@ -50,7 +50,7 @@ I (..\..\..\..\components\drivers\device\fr30xx\system_fr30xx.h)(0x6A1AF74E)
 I (..\..\..\..\components\drivers\device\fr30xx\trim_fr30xx.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -69,7 +69,7 @@ I (..\..\..\..\components\btdm\include\overide.h)(0x6A1AF74E)
 I (..\Src\mcu_imu.h)(0x6AC9FF6F)
 I (..\Src\app_task.h)(0x6AC9B112)
 I (..\..\..\..\components\modules\common\include\co_list.h)(0x6A1AF74E)
-I (..\Src\app_at.h)(0x6ACCAE57)
+I (..\Src\app_at.h)(0x6ACF2A41)
 I (..\..\..\..\components\modules\audio\audio_scene.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\audio\audio_common.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\audio\audio_hw.h)(0x6A1AF74E)
@@ -78,7 +78,7 @@ I (..\..\..\..\components\modules\audio\codec\codec.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\audio\resample\resample.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\audio\audio_encoder.h)(0x6A1AF74E)
 I (..\Src\app_rpmsg.h)(0x6A1AF74E)
-F (..\Src\app_at.c)(0x6ACEE684)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../components/btdm/include -I ../../../../components/drivers/cmsis -I ../../../../components/drivers/device/fr30xx -I ../../../../components/drivers/peripheral/Inc -I ../../../../components/modules/common/include -I ../../../../components/modules/FlashDB/flashdb/inc -I ../../../../components/modules/FlashDB/port/fal/inc -I ../../../../components/modules/FreeRTOS/include -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure/portable/GCC/ARM_CM33_NTZ -I ../../../../components/modules/heap -I ../../../common/btdm -I ../../../common/flashdb -I ../Inc -I ../Src -I ../Src/SWD -I ../../../../components/modules/crc -I ../../../../components/modules/lwip-STABLE-2_1_3_RELEASE/src/include -I ../../../common/lwip_port -I ../../../common/lwip_port/arch -I ../../../../components/modules/audio -I ../../../../components/modules/audio/algorithm -I ../../../../components/modules/audio/codec -I ../../../../components/modules/audio/resample -I ../../../../components/modules/rpmsg-lite/lib/include -I ../../../../components/modules/rpmsg-lite/lib/include/platform/fr30xx_m33 -I ../../../../components/modules/dsp -I ../../../../components/modules/ext_flash_program -I ../../../common/btdm/profile/ble_hid -I ../../../common/btdm/profile/ble_simple_gatt -I ../../../common/btdm/profile/ble_ANCS_AMCS -I ../../../../components/drivers/bsp/psram-I./RTE/_Project-IDevice/ARM/ARMCM33/Include-D__UVISION_VERSION="543" -D_RTE_-o ./objects/app_at.o -MMD)
+F (..\Src\app_at.c)(0x6ACF2F4F)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../components/btdm/include -I ../../../../components/drivers/cmsis -I ../../../../components/drivers/device/fr30xx -I ../../../../components/drivers/peripheral/Inc -I ../../../../components/modules/common/include -I ../../../../components/modules/FlashDB/flashdb/inc -I ../../../../components/modules/FlashDB/port/fal/inc -I ../../../../components/modules/FreeRTOS/include -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure/portable/GCC/ARM_CM33_NTZ -I ../../../../components/modules/heap -I ../../../common/btdm -I ../../../common/flashdb -I ../Inc -I ../Src -I ../Src/SWD -I ../../../../components/modules/crc -I ../../../../components/modules/lwip-STABLE-2_1_3_RELEASE/src/include -I ../../../common/lwip_port -I ../../../common/lwip_port/arch -I ../../../../components/modules/audio -I ../../../../components/modules/audio/algorithm -I ../../../../components/modules/audio/codec -I ../../../../components/modules/audio/resample -I ../../../../components/modules/rpmsg-lite/lib/include -I ../../../../components/modules/rpmsg-lite/lib/include/platform/fr30xx_m33 -I ../../../../components/modules/dsp -I ../../../../components/modules/ext_flash_program -I ../../../common/btdm/profile/ble_hid -I ../../../common/btdm/profile/ble_simple_gatt -I ../../../common/btdm/profile/ble_ANCS_AMCS -I ../../../../components/drivers/bsp/psram-I./RTE/_Project-IDevice/ARM/ARMCM33/Include-D__UVISION_VERSION="543" -D_RTE_-o ./objects/app_at.o -MMD)
 I (..\..\..\..\components\drivers\device\fr30xx\fr30xx.h)(0x6A1AF74E)
 I (..\..\..\..\components\drivers\cmsis\core_cm33.h)(0x6A1AF74E)
 I (..\..\..\..\components\drivers\peripheral\Inc\driver_common.h)(0x6A1AF74E)
@@ -127,7 +127,7 @@ I (..\..\..\..\components\drivers\device\fr30xx\system_fr30xx.h)(0x6A1AF74E)
 I (..\..\..\..\components\drivers\device\fr30xx\trim_fr30xx.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -155,7 +155,7 @@ I (..\..\..\..\components\btdm\include\gatt_sig_uuid.h)(0x6A1AF74E)
 I (..\..\..\..\components\btdm\include\ble_api_error.h)(0x6A1AF74E)
 I (..\Src\mcu_gnss.h)(0x6ACB3D93)
 I (..\Src\mcu_imu.h)(0x6AC9FF6F)
-I (..\Src\app_at.h)(0x6ACCAE57)
+I (..\Src\app_at.h)(0x6ACF2A41)
 I (..\Src\app_task.h)(0x6AC9B112)
 I (..\..\..\..\components\modules\common\include\co_list.h)(0x6A1AF74E)
 I (..\Src\app_ble.h)(0x6A1AF74E)
@@ -210,7 +210,7 @@ I (..\..\..\..\components\btdm\include\gaf_otp_api.h)(0x6A1AF74E)
 I (..\..\..\..\components\btdm\include\gaf_vc_api.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -237,7 +237,7 @@ I (..\..\..\..\components\btdm\include\me_api.h)(0x6A1AF74E)
 I (..\..\..\..\components\btdm\include\pan_pkt.h)(0x6A1AF74E)
 I (..\..\..\common\flashdb\fdb_app.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FlashDB\flashdb\inc\fdb_def.h)(0x6A1AF74E)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\Src\app_bt.h)(0x6A1AF74E)
 I (..\Src\app_btdm.h)(0x6A1AF74E)
 I (..\..\..\..\components\btdm\include\hf_api.h)(0x6A1AF74E)
@@ -314,7 +314,7 @@ I (..\..\..\..\components\modules\FreeRTOS\include\mpu_wrappers.h)(0x6A1AF74E)
 I (..\Src\app_hid_sdp.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\common\include\co_log.h)(0x6A1AF74E)
 F (..\Src\app_btdm.c)(0x6AC75BF3)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../components/btdm/include -I ../../../../components/drivers/cmsis -I ../../../../components/drivers/device/fr30xx -I ../../../../components/drivers/peripheral/Inc -I ../../../../components/modules/common/include -I ../../../../components/modules/FlashDB/flashdb/inc -I ../../../../components/modules/FlashDB/port/fal/inc -I ../../../../components/modules/FreeRTOS/include -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure/portable/GCC/ARM_CM33_NTZ -I ../../../../components/modules/heap -I ../../../common/btdm -I ../../../common/flashdb -I ../Inc -I ../Src -I ../Src/SWD -I ../../../../components/modules/crc -I ../../../../components/modules/lwip-STABLE-2_1_3_RELEASE/src/include -I ../../../common/lwip_port -I ../../../common/lwip_port/arch -I ../../../../components/modules/audio -I ../../../../components/modules/audio/algorithm -I ../../../../components/modules/audio/codec -I ../../../../components/modules/audio/resample -I ../../../../components/modules/rpmsg-lite/lib/include -I ../../../../components/modules/rpmsg-lite/lib/include/platform/fr30xx_m33 -I ../../../../components/modules/dsp -I ../../../../components/modules/ext_flash_program -I ../../../common/btdm/profile/ble_hid -I ../../../common/btdm/profile/ble_simple_gatt -I ../../../common/btdm/profile/ble_ANCS_AMCS -I ../../../../components/drivers/bsp/psram-I./RTE/_Project-IDevice/ARM/ARMCM33/Include-D__UVISION_VERSION="543" -D_RTE_-o ./objects/app_btdm.o -MMD)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\Src\app_task.h)(0x6AC9B112)
 I (..\..\..\..\components\modules\common\include\co_list.h)(0x6A1AF74E)
 I (..\..\..\..\components\drivers\device\fr30xx\fr30xx.h)(0x6A1AF74E)
@@ -399,7 +399,7 @@ I (..\Src\user_bt.h)(0x6A1AF74E)
 F (..\Src\app_task.c)(0x6AC9B114)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../components/btdm/include -I ../../../../components/drivers/cmsis -I ../../../../components/drivers/device/fr30xx -I ../../../../components/drivers/peripheral/Inc -I ../../../../components/modules/common/include -I ../../../../components/modules/FlashDB/flashdb/inc -I ../../../../components/modules/FlashDB/port/fal/inc -I ../../../../components/modules/FreeRTOS/include -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure/portable/GCC/ARM_CM33_NTZ -I ../../../../components/modules/heap -I ../../../common/btdm -I ../../../common/flashdb -I ../Inc -I ../Src -I ../Src/SWD -I ../../../../components/modules/crc -I ../../../../components/modules/lwip-STABLE-2_1_3_RELEASE/src/include -I ../../../common/lwip_port -I ../../../common/lwip_port/arch -I ../../../../components/modules/audio -I ../../../../components/modules/audio/algorithm -I ../../../../components/modules/audio/codec -I ../../../../components/modules/audio/resample -I ../../../../components/modules/rpmsg-lite/lib/include -I ../../../../components/modules/rpmsg-lite/lib/include/platform/fr30xx_m33 -I ../../../../components/modules/dsp -I ../../../../components/modules/ext_flash_program -I ../../../common/btdm/profile/ble_hid -I ../../../common/btdm/profile/ble_simple_gatt -I ../../../common/btdm/profile/ble_ANCS_AMCS -I ../../../../components/drivers/bsp/psram-I./RTE/_Project-IDevice/ARM/ARMCM33/Include-D__UVISION_VERSION="543" -D_RTE_-o ./objects/app_task.o -MMD)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -407,7 +407,7 @@ I (..\..\..\..\components\modules\FreeRTOS\portable\ARMv8M\non_secure\portable\G
 I (..\..\..\..\components\modules\FreeRTOS\include\mpu_wrappers.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\task.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\list.h)(0x6A1AF74E)
-I (..\Src\app_at.h)(0x6ACCAE57)
+I (..\Src\app_at.h)(0x6ACF2A41)
 I (..\..\..\..\components\drivers\peripheral\Inc\driver_uart.h)(0x6A1AF74E)
 I (..\..\..\..\components\drivers\device\fr30xx\fr30xx.h)(0x6A1AF74E)
 I (..\..\..\..\components\drivers\cmsis\core_cm33.h)(0x6A1AF74E)
@@ -500,7 +500,7 @@ I (..\Src\app_rpmsg.h)(0x6A1AF74E)
 I (..\Src\mcu_imu.h)(0x6AC9FF6F)
 F (..\Src\user_bt.c)(0x6ABCCBF9)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../components/btdm/include -I ../../../../components/drivers/cmsis -I ../../../../components/drivers/device/fr30xx -I ../../../../components/drivers/peripheral/Inc -I ../../../../components/modules/common/include -I ../../../../components/modules/FlashDB/flashdb/inc -I ../../../../components/modules/FlashDB/port/fal/inc -I ../../../../components/modules/FreeRTOS/include -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure/portable/GCC/ARM_CM33_NTZ -I ../../../../components/modules/heap -I ../../../common/btdm -I ../../../common/flashdb -I ../Inc -I ../Src -I ../Src/SWD -I ../../../../components/modules/crc -I ../../../../components/modules/lwip-STABLE-2_1_3_RELEASE/src/include -I ../../../common/lwip_port -I ../../../common/lwip_port/arch -I ../../../../components/modules/audio -I ../../../../components/modules/audio/algorithm -I ../../../../components/modules/audio/codec -I ../../../../components/modules/audio/resample -I ../../../../components/modules/rpmsg-lite/lib/include -I ../../../../components/modules/rpmsg-lite/lib/include/platform/fr30xx_m33 -I ../../../../components/modules/dsp -I ../../../../components/modules/ext_flash_program -I ../../../common/btdm/profile/ble_hid -I ../../../common/btdm/profile/ble_simple_gatt -I ../../../common/btdm/profile/ble_ANCS_AMCS -I ../../../../components/drivers/bsp/psram-I./RTE/_Project-IDevice/ARM/ARMCM33/Include-D__UVISION_VERSION="543" -D_RTE_-o ./objects/user_bt.o -MMD)
 I (..\Src\user_bt.h)(0x6A1AF74E)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\Src\app_bt.h)(0x6A1AF74E)
 I (..\Src\app_btdm.h)(0x6A1AF74E)
 I (..\..\..\..\components\btdm\include\hf_api.h)(0x6A1AF74E)
@@ -597,9 +597,9 @@ I (..\..\..\..\components\modules\audio\audio_a2dp_sink.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\audio\audio_a2dp_source.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\audio\audio_sco.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\audio\local_playback.h)(0x6A1AF74E)
-F (..\Inc\app_config.h)(0x6ACDE0A1)()
+F (..\Inc\app_config.h)(0x6ACF23DF)()
 F (..\Src\app_audio.c)(0x6A1AF74E)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../components/btdm/include -I ../../../../components/drivers/cmsis -I ../../../../components/drivers/device/fr30xx -I ../../../../components/drivers/peripheral/Inc -I ../../../../components/modules/common/include -I ../../../../components/modules/FlashDB/flashdb/inc -I ../../../../components/modules/FlashDB/port/fal/inc -I ../../../../components/modules/FreeRTOS/include -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure/portable/GCC/ARM_CM33_NTZ -I ../../../../components/modules/heap -I ../../../common/btdm -I ../../../common/flashdb -I ../Inc -I ../Src -I ../Src/SWD -I ../../../../components/modules/crc -I ../../../../components/modules/lwip-STABLE-2_1_3_RELEASE/src/include -I ../../../common/lwip_port -I ../../../common/lwip_port/arch -I ../../../../components/modules/audio -I ../../../../components/modules/audio/algorithm -I ../../../../components/modules/audio/codec -I ../../../../components/modules/audio/resample -I ../../../../components/modules/rpmsg-lite/lib/include -I ../../../../components/modules/rpmsg-lite/lib/include/platform/fr30xx_m33 -I ../../../../components/modules/dsp -I ../../../../components/modules/ext_flash_program -I ../../../common/btdm/profile/ble_hid -I ../../../common/btdm/profile/ble_simple_gatt -I ../../../common/btdm/profile/ble_ANCS_AMCS -I ../../../../components/drivers/bsp/psram-I./RTE/_Project-IDevice/ARM/ARMCM33/Include-D__UVISION_VERSION="543" -D_RTE_-o ./objects/app_audio.o -MMD)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\Src\app_audio.h)(0x6A1AF74E)
 I (..\Src\app_task.h)(0x6AC9B112)
 I (..\..\..\..\components\modules\common\include\co_list.h)(0x6A1AF74E)
@@ -720,7 +720,7 @@ I (..\..\..\..\components\drivers\device\fr30xx\system_fr30xx.h)(0x6A1AF74E)
 I (..\..\..\..\components\drivers\device\fr30xx\trim_fr30xx.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -760,7 +760,7 @@ I (..\..\..\..\components\btdm\include\me_api.h)(0x6A1AF74E)
 I (..\..\..\..\components\btdm\include\sec_api.h)(0x6A1AF74E)
 I (..\..\..\..\components\btdm\include\sdp_api.h)(0x6A1AF74E)
 I (..\..\..\common\btdm\btdm_mem.h)(0x6A1AF74E)
-F (..\Src\mcu_imu.c)(0x6ACB3D7C)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../components/btdm/include -I ../../../../components/drivers/cmsis -I ../../../../components/drivers/device/fr30xx -I ../../../../components/drivers/peripheral/Inc -I ../../../../components/modules/common/include -I ../../../../components/modules/FlashDB/flashdb/inc -I ../../../../components/modules/FlashDB/port/fal/inc -I ../../../../components/modules/FreeRTOS/include -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure/portable/GCC/ARM_CM33_NTZ -I ../../../../components/modules/heap -I ../../../common/btdm -I ../../../common/flashdb -I ../Inc -I ../Src -I ../Src/SWD -I ../../../../components/modules/crc -I ../../../../components/modules/lwip-STABLE-2_1_3_RELEASE/src/include -I ../../../common/lwip_port -I ../../../common/lwip_port/arch -I ../../../../components/modules/audio -I ../../../../components/modules/audio/algorithm -I ../../../../components/modules/audio/codec -I ../../../../components/modules/audio/resample -I ../../../../components/modules/rpmsg-lite/lib/include -I ../../../../components/modules/rpmsg-lite/lib/include/platform/fr30xx_m33 -I ../../../../components/modules/dsp -I ../../../../components/modules/ext_flash_program -I ../../../common/btdm/profile/ble_hid -I ../../../common/btdm/profile/ble_simple_gatt -I ../../../common/btdm/profile/ble_ANCS_AMCS -I ../../../../components/drivers/bsp/psram-I./RTE/_Project-IDevice/ARM/ARMCM33/Include-D__UVISION_VERSION="543" -D_RTE_-o ./objects/mcu_imu.o -MMD)
+F (..\Src\mcu_imu.c)(0x6ACF251C)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../components/btdm/include -I ../../../../components/drivers/cmsis -I ../../../../components/drivers/device/fr30xx -I ../../../../components/drivers/peripheral/Inc -I ../../../../components/modules/common/include -I ../../../../components/modules/FlashDB/flashdb/inc -I ../../../../components/modules/FlashDB/port/fal/inc -I ../../../../components/modules/FreeRTOS/include -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure/portable/GCC/ARM_CM33_NTZ -I ../../../../components/modules/heap -I ../../../common/btdm -I ../../../common/flashdb -I ../Inc -I ../Src -I ../Src/SWD -I ../../../../components/modules/crc -I ../../../../components/modules/lwip-STABLE-2_1_3_RELEASE/src/include -I ../../../common/lwip_port -I ../../../common/lwip_port/arch -I ../../../../components/modules/audio -I ../../../../components/modules/audio/algorithm -I ../../../../components/modules/audio/codec -I ../../../../components/modules/audio/resample -I ../../../../components/modules/rpmsg-lite/lib/include -I ../../../../components/modules/rpmsg-lite/lib/include/platform/fr30xx_m33 -I ../../../../components/modules/dsp -I ../../../../components/modules/ext_flash_program -I ../../../common/btdm/profile/ble_hid -I ../../../common/btdm/profile/ble_simple_gatt -I ../../../common/btdm/profile/ble_ANCS_AMCS -I ../../../../components/drivers/bsp/psram-I./RTE/_Project-IDevice/ARM/ARMCM33/Include-D__UVISION_VERSION="543" -D_RTE_-o ./objects/mcu_imu.o -MMD)
 I (..\Src\mcu_imu.h)(0x6AC9FF6F)
 I (..\..\..\..\components\drivers\peripheral\Inc\driver_uart.h)(0x6A1AF74E)
 I (..\..\..\..\components\drivers\device\fr30xx\fr30xx.h)(0x6A1AF74E)
@@ -808,7 +808,7 @@ I (..\..\..\..\components\drivers\peripheral\Inc\usb_wireless.h)(0x6A1AF74E)
 I (..\..\..\..\components\drivers\peripheral\Inc\usb_dev.h)(0x6A1AF74E)
 I (..\..\..\..\components\drivers\device\fr30xx\system_fr30xx.h)(0x6A1AF74E)
 I (..\..\..\..\components\drivers\device\fr30xx\trim_fr30xx.h)(0x6A1AF74E)
-F (..\Src\mcu_gnss.c)(0x6ACDC4D2)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../components/btdm/include -I ../../../../components/drivers/cmsis -I ../../../../components/drivers/device/fr30xx -I ../../../../components/drivers/peripheral/Inc -I ../../../../components/modules/common/include -I ../../../../components/modules/FlashDB/flashdb/inc -I ../../../../components/modules/FlashDB/port/fal/inc -I ../../../../components/modules/FreeRTOS/include -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure/portable/GCC/ARM_CM33_NTZ -I ../../../../components/modules/heap -I ../../../common/btdm -I ../../../common/flashdb -I ../Inc -I ../Src -I ../Src/SWD -I ../../../../components/modules/crc -I ../../../../components/modules/lwip-STABLE-2_1_3_RELEASE/src/include -I ../../../common/lwip_port -I ../../../common/lwip_port/arch -I ../../../../components/modules/audio -I ../../../../components/modules/audio/algorithm -I ../../../../components/modules/audio/codec -I ../../../../components/modules/audio/resample -I ../../../../components/modules/rpmsg-lite/lib/include -I ../../../../components/modules/rpmsg-lite/lib/include/platform/fr30xx_m33 -I ../../../../components/modules/dsp -I ../../../../components/modules/ext_flash_program -I ../../../common/btdm/profile/ble_hid -I ../../../common/btdm/profile/ble_simple_gatt -I ../../../common/btdm/profile/ble_ANCS_AMCS -I ../../../../components/drivers/bsp/psram-I./RTE/_Project-IDevice/ARM/ARMCM33/Include-D__UVISION_VERSION="543" -D_RTE_-o ./objects/mcu_gnss.o -MMD)
+F (..\Src\mcu_gnss.c)(0x6ACF2F25)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../components/btdm/include -I ../../../../components/drivers/cmsis -I ../../../../components/drivers/device/fr30xx -I ../../../../components/drivers/peripheral/Inc -I ../../../../components/modules/common/include -I ../../../../components/modules/FlashDB/flashdb/inc -I ../../../../components/modules/FlashDB/port/fal/inc -I ../../../../components/modules/FreeRTOS/include -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure/portable/GCC/ARM_CM33_NTZ -I ../../../../components/modules/heap -I ../../../common/btdm -I ../../../common/flashdb -I ../Inc -I ../Src -I ../Src/SWD -I ../../../../components/modules/crc -I ../../../../components/modules/lwip-STABLE-2_1_3_RELEASE/src/include -I ../../../common/lwip_port -I ../../../common/lwip_port/arch -I ../../../../components/modules/audio -I ../../../../components/modules/audio/algorithm -I ../../../../components/modules/audio/codec -I ../../../../components/modules/audio/resample -I ../../../../components/modules/rpmsg-lite/lib/include -I ../../../../components/modules/rpmsg-lite/lib/include/platform/fr30xx_m33 -I ../../../../components/modules/dsp -I ../../../../components/modules/ext_flash_program -I ../../../common/btdm/profile/ble_hid -I ../../../common/btdm/profile/ble_simple_gatt -I ../../../common/btdm/profile/ble_ANCS_AMCS -I ../../../../components/drivers/bsp/psram-I./RTE/_Project-IDevice/ARM/ARMCM33/Include-D__UVISION_VERSION="543" -D_RTE_-o ./objects/mcu_gnss.o -MMD)
 I (..\Src\mcu_gnss.h)(0x6ACB3D93)
 I (..\..\..\..\components\drivers\peripheral\Inc\driver_uart.h)(0x6A1AF74E)
 I (..\..\..\..\components\drivers\device\fr30xx\fr30xx.h)(0x6A1AF74E)
@@ -931,7 +931,7 @@ I (..\..\..\common\btdm\profile\ble_ANCS_AMCS\AMS_client.h)(0x6A1AF74E)
 I (..\..\..\common\btdm\profile\ble_ANCS_AMCS\ANCS_AMS_client.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -1092,7 +1092,7 @@ I (..\..\..\..\components\drivers\device\fr30xx\system_fr30xx.h)(0x6A1AF74E)
 I (..\..\..\..\components\drivers\device\fr30xx\trim_fr30xx.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -1152,7 +1152,7 @@ I (..\..\..\..\components\drivers\device\fr30xx\trim_fr30xx.h)(0x6A1AF74E)
 I (..\..\..\..\components\btdm\include\btdm_host.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -1275,7 +1275,7 @@ I (..\..\..\..\components\drivers\device\fr30xx\system_fr30xx.h)(0x6A1AF74E)
 I (..\..\..\..\components\drivers\device\fr30xx\trim_fr30xx.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -2327,7 +2327,7 @@ I (..\..\..\..\components\modules\FlashDB\flashdb\inc\fdb_low_lvl.h)(0x6A1AF74E)
 F (..\..\..\..\components\modules\FreeRTOS\croutine.c)(0x6A1AF74E)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../components/btdm/include -I ../../../../components/drivers/cmsis -I ../../../../components/drivers/device/fr30xx -I ../../../../components/drivers/peripheral/Inc -I ../../../../components/modules/common/include -I ../../../../components/modules/FlashDB/flashdb/inc -I ../../../../components/modules/FlashDB/port/fal/inc -I ../../../../components/modules/FreeRTOS/include -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure/portable/GCC/ARM_CM33_NTZ -I ../../../../components/modules/heap -I ../../../common/btdm -I ../../../common/flashdb -I ../Inc -I ../Src -I ../Src/SWD -I ../../../../components/modules/crc -I ../../../../components/modules/lwip-STABLE-2_1_3_RELEASE/src/include -I ../../../common/lwip_port -I ../../../common/lwip_port/arch -I ../../../../components/modules/audio -I ../../../../components/modules/audio/algorithm -I ../../../../components/modules/audio/codec -I ../../../../components/modules/audio/resample -I ../../../../components/modules/rpmsg-lite/lib/include -I ../../../../components/modules/rpmsg-lite/lib/include/platform/fr30xx_m33 -I ../../../../components/modules/dsp -I ../../../../components/modules/ext_flash_program -I ../../../common/btdm/profile/ble_hid -I ../../../common/btdm/profile/ble_simple_gatt -I ../../../common/btdm/profile/ble_ANCS_AMCS -I ../../../../components/drivers/bsp/psram-I./RTE/_Project-IDevice/ARM/ARMCM33/Include-D__UVISION_VERSION="543" -D_RTE_-o ./objects/croutine.o -MMD)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -2339,7 +2339,7 @@ I (..\..\..\..\components\modules\FreeRTOS\include\croutine.h)(0x6A1AF74E)
 F (..\..\..\..\components\modules\FreeRTOS\event_groups.c)(0x6A1AF74E)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../components/btdm/include -I ../../../../components/drivers/cmsis -I ../../../../components/drivers/device/fr30xx -I ../../../../components/drivers/peripheral/Inc -I ../../../../components/modules/common/include -I ../../../../components/modules/FlashDB/flashdb/inc -I ../../../../components/modules/FlashDB/port/fal/inc -I ../../../../components/modules/FreeRTOS/include -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure/portable/GCC/ARM_CM33_NTZ -I ../../../../components/modules/heap -I ../../../common/btdm -I ../../../common/flashdb -I ../Inc -I ../Src -I ../Src/SWD -I ../../../../components/modules/crc -I ../../../../components/modules/lwip-STABLE-2_1_3_RELEASE/src/include -I ../../../common/lwip_port -I ../../../common/lwip_port/arch -I ../../../../components/modules/audio -I ../../../../components/modules/audio/algorithm -I ../../../../components/modules/audio/codec -I ../../../../components/modules/audio/resample -I ../../../../components/modules/rpmsg-lite/lib/include -I ../../../../components/modules/rpmsg-lite/lib/include/platform/fr30xx_m33 -I ../../../../components/modules/dsp -I ../../../../components/modules/ext_flash_program -I ../../../common/btdm/profile/ble_hid -I ../../../common/btdm/profile/ble_simple_gatt -I ../../../common/btdm/profile/ble_ANCS_AMCS -I ../../../../components/drivers/bsp/psram-I./RTE/_Project-IDevice/ARM/ARMCM33/Include-D__UVISION_VERSION="543" -D_RTE_-o ./objects/event_groups.o -MMD)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -2352,7 +2352,7 @@ I (..\..\..\..\components\modules\FreeRTOS\include\event_groups.h)(0x6A1AF74E)
 F (..\..\..\..\components\modules\FreeRTOS\list.c)(0x6A1AF74E)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../components/btdm/include -I ../../../../components/drivers/cmsis -I ../../../../components/drivers/device/fr30xx -I ../../../../components/drivers/peripheral/Inc -I ../../../../components/modules/common/include -I ../../../../components/modules/FlashDB/flashdb/inc -I ../../../../components/modules/FlashDB/port/fal/inc -I ../../../../components/modules/FreeRTOS/include -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure/portable/GCC/ARM_CM33_NTZ -I ../../../../components/modules/heap -I ../../../common/btdm -I ../../../common/flashdb -I ../Inc -I ../Src -I ../Src/SWD -I ../../../../components/modules/crc -I ../../../../components/modules/lwip-STABLE-2_1_3_RELEASE/src/include -I ../../../common/lwip_port -I ../../../common/lwip_port/arch -I ../../../../components/modules/audio -I ../../../../components/modules/audio/algorithm -I ../../../../components/modules/audio/codec -I ../../../../components/modules/audio/resample -I ../../../../components/modules/rpmsg-lite/lib/include -I ../../../../components/modules/rpmsg-lite/lib/include/platform/fr30xx_m33 -I ../../../../components/modules/dsp -I ../../../../components/modules/ext_flash_program -I ../../../common/btdm/profile/ble_hid -I ../../../common/btdm/profile/ble_simple_gatt -I ../../../common/btdm/profile/ble_ANCS_AMCS -I ../../../../components/drivers/bsp/psram-I./RTE/_Project-IDevice/ARM/ARMCM33/Include-D__UVISION_VERSION="543" -D_RTE_-o ./objects/list.o -MMD)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -2362,7 +2362,7 @@ I (..\..\..\..\components\modules\FreeRTOS\include\list.h)(0x6A1AF74E)
 F (..\..\..\..\components\modules\FreeRTOS\queue.c)(0x6A1AF74E)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../components/btdm/include -I ../../../../components/drivers/cmsis -I ../../../../components/drivers/device/fr30xx -I ../../../../components/drivers/peripheral/Inc -I ../../../../components/modules/common/include -I ../../../../components/modules/FlashDB/flashdb/inc -I ../../../../components/modules/FlashDB/port/fal/inc -I ../../../../components/modules/FreeRTOS/include -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure/portable/GCC/ARM_CM33_NTZ -I ../../../../components/modules/heap -I ../../../common/btdm -I ../../../common/flashdb -I ../Inc -I ../Src -I ../Src/SWD -I ../../../../components/modules/crc -I ../../../../components/modules/lwip-STABLE-2_1_3_RELEASE/src/include -I ../../../common/lwip_port -I ../../../common/lwip_port/arch -I ../../../../components/modules/audio -I ../../../../components/modules/audio/algorithm -I ../../../../components/modules/audio/codec -I ../../../../components/modules/audio/resample -I ../../../../components/modules/rpmsg-lite/lib/include -I ../../../../components/modules/rpmsg-lite/lib/include/platform/fr30xx_m33 -I ../../../../components/modules/dsp -I ../../../../components/modules/ext_flash_program -I ../../../common/btdm/profile/ble_hid -I ../../../common/btdm/profile/ble_simple_gatt -I ../../../common/btdm/profile/ble_ANCS_AMCS -I ../../../../components/drivers/bsp/psram-I./RTE/_Project-IDevice/ARM/ARMCM33/Include-D__UVISION_VERSION="543" -D_RTE_-o ./objects/queue.o -MMD)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -2374,7 +2374,7 @@ I (..\..\..\..\components\modules\FreeRTOS\include\queue.h)(0x6A1AF74E)
 F (..\..\..\..\components\modules\FreeRTOS\stream_buffer.c)(0x6A1AF74E)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../components/btdm/include -I ../../../../components/drivers/cmsis -I ../../../../components/drivers/device/fr30xx -I ../../../../components/drivers/peripheral/Inc -I ../../../../components/modules/common/include -I ../../../../components/modules/FlashDB/flashdb/inc -I ../../../../components/modules/FlashDB/port/fal/inc -I ../../../../components/modules/FreeRTOS/include -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure/portable/GCC/ARM_CM33_NTZ -I ../../../../components/modules/heap -I ../../../common/btdm -I ../../../common/flashdb -I ../Inc -I ../Src -I ../Src/SWD -I ../../../../components/modules/crc -I ../../../../components/modules/lwip-STABLE-2_1_3_RELEASE/src/include -I ../../../common/lwip_port -I ../../../common/lwip_port/arch -I ../../../../components/modules/audio -I ../../../../components/modules/audio/algorithm -I ../../../../components/modules/audio/codec -I ../../../../components/modules/audio/resample -I ../../../../components/modules/rpmsg-lite/lib/include -I ../../../../components/modules/rpmsg-lite/lib/include/platform/fr30xx_m33 -I ../../../../components/modules/dsp -I ../../../../components/modules/ext_flash_program -I ../../../common/btdm/profile/ble_hid -I ../../../common/btdm/profile/ble_simple_gatt -I ../../../common/btdm/profile/ble_ANCS_AMCS -I ../../../../components/drivers/bsp/psram-I./RTE/_Project-IDevice/ARM/ARMCM33/Include-D__UVISION_VERSION="543" -D_RTE_-o ./objects/stream_buffer.o -MMD)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -2432,7 +2432,7 @@ I (..\..\..\..\components\drivers\device\fr30xx\system_fr30xx.h)(0x6A1AF74E)
 I (..\..\..\..\components\drivers\device\fr30xx\trim_fr30xx.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -2445,7 +2445,7 @@ I (..\..\..\..\components\modules\FreeRTOS\include\stack_macros.h)(0x6A1AF74E)
 F (..\..\..\..\components\modules\FreeRTOS\timers.c)(0x6A1AF74E)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../components/btdm/include -I ../../../../components/drivers/cmsis -I ../../../../components/drivers/device/fr30xx -I ../../../../components/drivers/peripheral/Inc -I ../../../../components/modules/common/include -I ../../../../components/modules/FlashDB/flashdb/inc -I ../../../../components/modules/FlashDB/port/fal/inc -I ../../../../components/modules/FreeRTOS/include -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure/portable/GCC/ARM_CM33_NTZ -I ../../../../components/modules/heap -I ../../../common/btdm -I ../../../common/flashdb -I ../Inc -I ../Src -I ../Src/SWD -I ../../../../components/modules/crc -I ../../../../components/modules/lwip-STABLE-2_1_3_RELEASE/src/include -I ../../../common/lwip_port -I ../../../common/lwip_port/arch -I ../../../../components/modules/audio -I ../../../../components/modules/audio/algorithm -I ../../../../components/modules/audio/codec -I ../../../../components/modules/audio/resample -I ../../../../components/modules/rpmsg-lite/lib/include -I ../../../../components/modules/rpmsg-lite/lib/include/platform/fr30xx_m33 -I ../../../../components/modules/dsp -I ../../../../components/modules/ext_flash_program -I ../../../common/btdm/profile/ble_hid -I ../../../common/btdm/profile/ble_simple_gatt -I ../../../common/btdm/profile/ble_ANCS_AMCS -I ../../../../components/drivers/bsp/psram-I./RTE/_Project-IDevice/ARM/ARMCM33/Include-D__UVISION_VERSION="543" -D_RTE_-o ./objects/timers.o -MMD)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -2458,7 +2458,7 @@ I (..\..\..\..\components\modules\FreeRTOS\include\timers.h)(0x6A1AF74E)
 F (..\..\..\..\components\modules\FreeRTOS\portable\ARMv8M\non_secure\port.c)(0x6A1AF74E)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../components/btdm/include -I ../../../../components/drivers/cmsis -I ../../../../components/drivers/device/fr30xx -I ../../../../components/drivers/peripheral/Inc -I ../../../../components/modules/common/include -I ../../../../components/modules/FlashDB/flashdb/inc -I ../../../../components/modules/FlashDB/port/fal/inc -I ../../../../components/modules/FreeRTOS/include -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure/portable/GCC/ARM_CM33_NTZ -I ../../../../components/modules/heap -I ../../../common/btdm -I ../../../common/flashdb -I ../Inc -I ../Src -I ../Src/SWD -I ../../../../components/modules/crc -I ../../../../components/modules/lwip-STABLE-2_1_3_RELEASE/src/include -I ../../../common/lwip_port -I ../../../common/lwip_port/arch -I ../../../../components/modules/audio -I ../../../../components/modules/audio/algorithm -I ../../../../components/modules/audio/codec -I ../../../../components/modules/audio/resample -I ../../../../components/modules/rpmsg-lite/lib/include -I ../../../../components/modules/rpmsg-lite/lib/include/platform/fr30xx_m33 -I ../../../../components/modules/dsp -I ../../../../components/modules/ext_flash_program -I ../../../common/btdm/profile/ble_hid -I ../../../common/btdm/profile/ble_simple_gatt -I ../../../common/btdm/profile/ble_ANCS_AMCS -I ../../../../components/drivers/bsp/psram-I./RTE/_Project-IDevice/ARM/ARMCM33/Include-D__UVISION_VERSION="543" -D_RTE_-o ./objects/port.o -MMD)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -2471,7 +2471,7 @@ F (..\..\..\..\components\modules\FreeRTOS\portable\ARMv8M\non_secure\portable\G
 I (..\..\..\..\components\modules\FreeRTOS\portable\ARMv8M\non_secure\portasm.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -2526,7 +2526,7 @@ I (..\..\..\..\components\drivers\device\fr30xx\system_fr30xx.h)(0x6A1AF74E)
 I (..\..\..\..\components\drivers\device\fr30xx\trim_fr30xx.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -2536,7 +2536,7 @@ I (..\..\..\..\components\modules\heap\heap.h)(0x6A1AF74E)
 F (..\..\..\..\components\modules\FreeRTOS\freertos_sleep.c)(0x6A1AF74E)(-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m33 -mfpu=fpv5-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -mlittle-endian -gdwarf-4 -O2 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../../../../components/btdm/include -I ../../../../components/drivers/cmsis -I ../../../../components/drivers/device/fr30xx -I ../../../../components/drivers/peripheral/Inc -I ../../../../components/modules/common/include -I ../../../../components/modules/FlashDB/flashdb/inc -I ../../../../components/modules/FlashDB/port/fal/inc -I ../../../../components/modules/FreeRTOS/include -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure -I ../../../../components/modules/FreeRTOS/portable/ARMv8M/non_secure/portable/GCC/ARM_CM33_NTZ -I ../../../../components/modules/heap -I ../../../common/btdm -I ../../../common/flashdb -I ../Inc -I ../Src -I ../Src/SWD -I ../../../../components/modules/crc -I ../../../../components/modules/lwip-STABLE-2_1_3_RELEASE/src/include -I ../../../common/lwip_port -I ../../../common/lwip_port/arch -I ../../../../components/modules/audio -I ../../../../components/modules/audio/algorithm -I ../../../../components/modules/audio/codec -I ../../../../components/modules/audio/resample -I ../../../../components/modules/rpmsg-lite/lib/include -I ../../../../components/modules/rpmsg-lite/lib/include/platform/fr30xx_m33 -I ../../../../components/modules/dsp -I ../../../../components/modules/ext_flash_program -I ../../../common/btdm/profile/ble_hid -I ../../../common/btdm/profile/ble_simple_gatt -I ../../../common/btdm/profile/ble_ANCS_AMCS -I ../../../../components/drivers/bsp/psram-I./RTE/_Project-IDevice/ARM/ARMCM33/Include-D__UVISION_VERSION="543" -D_RTE_-o ./objects/freertos_sleep.o -MMD)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -3043,7 +3043,7 @@ I (..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\err
 I (..\..\..\common\lwip_port\arch\sys_arch.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -3130,7 +3130,7 @@ I (..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\err
 I (..\..\..\common\lwip_port\arch\sys_arch.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -3164,7 +3164,7 @@ I (..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\err
 I (..\..\..\common\lwip_port\arch\sys_arch.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -3262,7 +3262,7 @@ I (..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\sys
 I (..\..\..\common\lwip_port\arch\sys_arch.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -3295,7 +3295,7 @@ I (..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\sys
 I (..\..\..\common\lwip_port\arch\sys_arch.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -3338,7 +3338,7 @@ I (..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\err
 I (..\..\..\common\lwip_port\arch\sys_arch.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -3462,7 +3462,7 @@ I (..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\sys
 I (..\..\..\common\lwip_port\arch\sys_arch.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -3567,7 +3567,7 @@ I (..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\sys
 I (..\..\..\common\lwip_port\arch\sys_arch.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -3621,7 +3621,7 @@ I (..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\sys
 I (..\..\..\common\lwip_port\arch\sys_arch.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -3673,7 +3673,7 @@ I (..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\sys
 I (..\..\..\common\lwip_port\arch\sys_arch.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -3715,7 +3715,7 @@ I (..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\sys
 I (..\..\..\common\lwip_port\arch\sys_arch.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -3777,7 +3777,7 @@ I (..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\sys
 I (..\..\..\common\lwip_port\arch\sys_arch.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -3825,7 +3825,7 @@ I (..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\sys
 I (..\..\..\common\lwip_port\arch\sys_arch.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -3870,7 +3870,7 @@ I (..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\sys
 I (..\..\..\common\lwip_port\arch\sys_arch.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -3972,7 +3972,7 @@ I (..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\sys
 I (..\..\..\common\lwip_port\arch\sys_arch.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -4058,7 +4058,7 @@ I (..\..\..\..\components\modules\lwip-STABLE-2_1_3_RELEASE\src\include\lwip\err
 I (..\..\..\common\lwip_port\arch\sys_arch.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -4072,7 +4072,7 @@ F (..\..\..\..\components\modules\audio\audio_a2dp_sink.c)(0x6A1AF74E)(-xc -std=
 I (..\..\..\..\components\modules\audio\audio_scene.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -4139,7 +4139,7 @@ F (..\..\..\..\components\modules\audio\audio_a2dp_source.c)(0x6A1AF74E)(-xc -st
 I (..\..\..\..\components\modules\audio\audio_scene.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -4254,7 +4254,7 @@ I (..\..\..\..\components\drivers\device\fr30xx\trim_fr30xx.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\audio\codec\codec.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -4316,7 +4316,7 @@ I (..\..\..\..\components\drivers\device\fr30xx\trim_fr30xx.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\audio\codec\codec.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -4376,7 +4376,7 @@ I (..\..\..\..\components\drivers\device\fr30xx\trim_fr30xx.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\audio\audio_common.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -4387,7 +4387,7 @@ F (..\..\..\..\components\modules\audio\audio_scene.c)(0x6A1AF74E)(-xc -std=gnu1
 I (..\..\..\..\components\modules\audio\audio_scene.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -4456,7 +4456,7 @@ F (..\..\..\..\components\modules\audio\audio_sco.c)(0x6A1AF74E)(-xc -std=gnu11 
 I (..\..\..\..\components\modules\audio\audio_scene.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -4572,7 +4572,7 @@ I (..\..\..\..\components\drivers\device\fr30xx\trim_fr30xx.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\audio\codec\codec.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -4590,7 +4590,7 @@ F (..\..\..\..\components\modules\audio\loopback.c)(0x6A1AF74E)(-xc -std=gnu11 -
 I (..\..\..\..\components\modules\audio\audio_scene.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -4668,7 +4668,7 @@ F (..\..\..\..\components\modules\audio\recorder.c)(0x6A1AF74E)(-xc -std=gnu11 -
 I (..\..\..\..\components\modules\audio\audio_scene.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -4735,7 +4735,7 @@ F (..\..\..\..\components\modules\audio\voice_recognize.c)(0x6A1AF74E)(-xc -std=
 I (..\..\..\..\components\modules\audio\audio_scene.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -4824,7 +4824,7 @@ I (..\..\..\..\components\modules\rpmsg-lite\lib\include\rpmsg_compiler.h)(0x6A1
 I (..\..\..\..\components\modules\audio\resample\resample.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -4881,7 +4881,7 @@ F (..\..\..\..\components\modules\audio\codec\codec.c)(0x6A1AF74E)(-xc -std=gnu1
 I (..\..\..\..\components\modules\audio\codec\codec.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -4960,7 +4960,7 @@ I (..\..\..\..\components\modules\rpmsg-lite\lib\include\rpmsg_compiler.h)(0x6A1
 I (..\..\..\..\components\modules\audio\algorithm\algorithm.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -5122,7 +5122,7 @@ I (..\Inc\rpmsg_config.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\rpmsg-lite\lib\include\platform\fr30xx_m33\rpmsg_platform.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -5249,7 +5249,7 @@ I (..\..\..\..\components\modules\rpmsg-lite\lib\include\platform\fr30xx_m33\rpm
 I (..\..\..\..\components\modules\rpmsg-lite\lib\include\rpmsg_compiler.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)
@@ -5364,7 +5364,7 @@ I (..\..\..\..\components\drivers\device\fr30xx\trim_fr30xx.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\ext_flash_program\ext_flash_program.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\FreeRTOS.h)(0x6A1AF74E)
 I (..\Inc\FreeRTOSConfig.h)(0x6ACDCE3C)
-I (..\Inc\app_config.h)(0x6ACDE0A1)
+I (..\Inc\app_config.h)(0x6ACF23DF)
 I (..\..\..\..\components\modules\FreeRTOS\include\projdefs.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\portable.h)(0x6A1AF74E)
 I (..\..\..\..\components\modules\FreeRTOS\include\deprecated_definitions.h)(0x6A1AF74E)

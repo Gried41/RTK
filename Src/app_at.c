@@ -43,6 +43,7 @@
 #define UART_TO_SPP_IDLE_TIMEOUT    pdMS_TO_TICKS(3)
 #define AT_CMD_MAX_LEN              128
 
+#if ENABLE_GNSS_CHECK_LOG == 1
 //统计各类型报文数量
 uint32_t uart2_gga_count = 0;
 uint32_t uart2_rmc_count = 0;
@@ -50,13 +51,13 @@ uint32_t uart2_zda_count = 0;
 uint32_t uart3_gga_count = 0;
 uint32_t uart3_rmc_count = 0;
 uint32_t uart3_zda_count = 0;
-
+#endif
 
 //串口打印互斥锁
 static SemaphoreHandle_t uart_printf_mutex = NULL;
 
 /*  队列，保存输入的AT指令  */
-static QueueHandle_t at_cmd_queue;
+static QueueHandle_t rx_to_imu_queue;
 /*  uart3是单字节接收，用于接收每个字节的变量   */
 static uint8_t uart3_rx_byte;
 /*  uart3接收指令缓冲区 */
@@ -90,7 +91,7 @@ static uint8_t uart1_rx_buf_len;
 static volatile uint32_t gnss_com2_dropped_count;
 
 
-static TaskHandle_t my_task_handle;
+static TaskHandle_t rx_to_imu_task_handle;
 static TaskHandle_t rx_to_gnss_uart3_task_handle;
 static TaskHandle_t rx_to_gnss_uart2_task_handle;
 static TaskHandle_t imu_to_rx_task_handle;
@@ -1641,9 +1642,6 @@ void imu_to_rx_done(struct __UART_HandleTypeDef *handle)
 {
     BaseType_t higher_priority_task_woken = pdFALSE;
     char ch = (char)uart4_rx_byte;
-    /*
-        imu向MCU发回的验证信息前两个字符分别是 \r\n,放置第一次空数据进入
-    */
     if(ch == '\r' || ch == '\n')
     {
         //结尾了为每条数据添加\0
@@ -1655,9 +1653,7 @@ void imu_to_rx_done(struct __UART_HandleTypeDef *handle)
                 xQueueSendFromISR(imu_to_rx_queue,uart4_rx_buf,&higher_priority_task_woken);
             }
         }
-        //将数据交给队列
         uart4_rx_buf_len = 0;
-
     }
     else
     {
@@ -1670,7 +1666,6 @@ void imu_to_rx_done(struct __UART_HandleTypeDef *handle)
             uart4_rx_buf_len = 0;
         }
     }
-
     /* 重新启动下一字节的接收 */
     uart_receive_IT(handle, &uart4_rx_byte, 1);
 
@@ -1687,7 +1682,7 @@ void imu_to_rx_task(void *arg)
         {
             if(recv_data)
             {
-                printf("IMU Send:%s\r\n",recv_data);
+                printf("%s\r\n",recv_data);
             }
         }
     }
@@ -1716,9 +1711,9 @@ void rx_to_imu_done(struct __UART_HandleTypeDef *handle)
         {
             uart3_buf[uart3_buf_len] = '\0';
 
-            if(at_cmd_queue != NULL)
+            if(rx_to_imu_queue != NULL)
             {
-                xQueueSendFromISR(at_cmd_queue,uart3_buf,&higher_priority_task_woken);
+                xQueueSendFromISR(rx_to_imu_queue,uart3_buf,&higher_priority_task_woken);
             }
             uart3_buf_len = 0;
         }
@@ -1740,28 +1735,28 @@ void rx_to_imu_done(struct __UART_HandleTypeDef *handle)
 
     portYIELD_FROM_ISR(higher_priority_task_woken);
 }
-void my_task(void *arg)
+void rx_to_imu_task(void *arg)
 {
     struct __UART_HandleTypeDef *huart_handle = (struct UART_HandleTypeDef  *)arg;
     char cmd[AT_CMD_MAX_LEN];
     while(1) 
     {
         //等待指令输入后调用 void Uart4_Send_AT_cmd(const char *cmd)
-        if (xQueueReceive(at_cmd_queue,cmd,portMAX_DELAY) == pdPASS)
+        if (xQueueReceive(rx_to_imu_queue,cmd,portMAX_DELAY) == pdPASS)
         {
             Uart4_Send_AT_cmd(cmd,huart_handle);
         }
     }
 }
-void My_task_init(UART_HandleTypeDef *handle)
+void rx_to_imu_task_init(UART_HandleTypeDef *handle)
 {   
-    at_cmd_queue = xQueueCreate(4, 128);
-    if(at_cmd_queue == NULL)
+    rx_to_imu_queue = xQueueCreate(4, 128);
+    if(rx_to_imu_queue == NULL)
     {
-        printf("at_cmd_queue create fail\r\n");
+        printf("rx_to_imu_queue create fail\r\n");
         return;
     }
-    xTaskCreate(my_task, "my_task", 256, (void *)handle, 1, &my_task_handle);
+    xTaskCreate(rx_to_imu_task, "rx_to_imu_task", 256, (void *)handle, 1, &rx_to_imu_task_handle);
 }  
 
 
@@ -1845,93 +1840,75 @@ void Uart_Recv_IT(struct __UART_HandleTypeDef *handle)
 /*
 @fn:中断回调函数，处理 RX 的信息并且 发送到队列， UART2 用队列信息去发送给 GNSS
 */
-void rx_to_gnss_uart3_done(struct __UART_HandleTypeDef *handle)
+void rx_to_gnss_done(struct __UART_HandleTypeDef *handle)
 {
     BaseType_t higher_priority_task_woken = pdFALSE;
     char ch = (char)uart3_rx_byte;
-
     if (ch == '\r' || ch == '\n')
     {
         if (uart3_buf_len > 0)
         {
             char *cmd_start = NULL;
             size_t cmd_len;
-
-            /* 添加字符串结束符 */
             uart3_buf[uart3_buf_len] = '\0';
-
-            /*
-             * com2 VERSION
-             * 去掉 com2 前缀，将 VERSION 放入 UART2 对应的队列
-             */
-            if (strncmp(uart3_buf, "com2 ", 5) == 0 ||strncmp(uart3_buf, "COM2 ", 5) == 0)
+            if (strncmp(uart3_buf, "com2 ", 5) == 0 || strncmp(uart3_buf, "COM2 ", 5) == 0)
             {
                 cmd_start = uart3_buf + 5;
-
-                /* 跳过多余空格和制表符 */
                 while (*cmd_start == ' ' || *cmd_start == '\t')
                 {
                     cmd_start++;
                 }
-
                 if (*cmd_start != '\0' && rx_to_gnss_uart2_queue != NULL)
                 {
-                    /* 将纯指令移动到缓冲区开头 */
                     cmd_len = strlen(cmd_start);
                     memmove(uart3_buf, cmd_start, cmd_len + 1);
-
-                    /* 放入已有的 UART2 队列 */
                     xQueueSendFromISR(rx_to_gnss_uart2_queue,uart3_buf,&higher_priority_task_woken);
                 }
             }
-            /*
-             * com3 VERSION
-             * 去掉 com3 前缀，将 VERSION 放入 UART3 对应的队列
-             */
-            else if (strncmp(uart3_buf, "com3 ", 5) == 0 ||strncmp(uart3_buf, "COM3 ", 5) == 0)
+            else if (strncmp(uart3_buf, "com3 ", 5) == 0 || strncmp(uart3_buf, "COM3 ", 5) == 0)
             {
                 cmd_start = uart3_buf + 5;
-
-                /* 跳过多余空格和制表符 */
                 while (*cmd_start == ' ' || *cmd_start == '\t')
                 {
                     cmd_start++;
                 }
-
-                if (*cmd_start != '\0' &&
-                    rx_to_gnss_uart3_queue != NULL)
+                if (*cmd_start != '\0' && rx_to_gnss_uart3_queue != NULL)
                 {
-                    /* 将纯指令移动到缓冲区开头 */
                     cmd_len = strlen(cmd_start);
                     memmove(uart3_buf, cmd_start, cmd_len + 1);
-
-                    /* 放入已有的 UART3 队列 */
-                    xQueueSendFromISR(rx_to_gnss_uart3_queue,uart3_buf,&higher_priority_task_woken
-                    );
+                    xQueueSendFromISR(rx_to_gnss_uart3_queue,uart3_buf,&higher_priority_task_woken);
                 }
             }
-
-            /* 当前命令处理完毕 */
+            else if(strncmp(uart3_buf, "imu ", 4) == 0 || strncmp(uart3_buf, "IMU ", 4) == 0)
+            {
+                cmd_start = uart3_buf + 4;
+                while( *cmd_start == ' '|| *cmd_start == '\t')
+                {
+                    cmd_start++;
+                }
+                if(*cmd_start != '\0' && rx_to_imu_queue != NULL)
+                {
+                    cmd_len = strlen(cmd_start);
+                    memmove(uart3_buf, cmd_start , cmd_len + 1);
+                    xQueueSendFromISR(rx_to_imu_queue,uart3_buf,&higher_priority_task_woken);
+                }
+            }
             uart3_buf_len = 0;
         }
     }
     else
     {
-        /* 接收字符，预留一个字节存放 '\0' */
         if (uart3_buf_len < AT_CMD_MAX_LEN - 1)
         {
             uart3_buf[uart3_buf_len++] = ch;
         }
         else
         {
-            /* 命令超长，丢弃当前数据 */
             uart3_buf_len = 0;
         }
     }
-
     /* 继续接收下一个字节 */
     uart_receive_IT(handle, &uart3_rx_byte, 1);
-
     portYIELD_FROM_ISR(higher_priority_task_woken);
 }
 void rx_to_gnss_uart3_task(void *arg)
@@ -2008,7 +1985,7 @@ void gnss_uart3_to_rx_task(void *arg)
 {
     //初始化接收数据缓冲区
     char recv_data[128];
-
+    #if ENABLE_GNSS_CHECK_LOG == 1
     uint32_t checked_count = 0;
     uint32_t pass_count = 0;
     uint32_t fail_count = 0;
@@ -2016,14 +1993,15 @@ void gnss_uart3_to_rx_task(void *arg)
     TickType_t start_tick = xTaskGetTickCount();
     TickType_t last_report_tick = start_tick;
     const TickType_t report_period = pdMS_TO_TICKS(60000);
-
+    #endif
     while(1)
     {
         //阻塞等待队列出现新的数据
-        //if (xQueueReceive(gnss_uart3_to_rx_queue,recv_data,portMAX_DELAY) == pdPASS)
-        //{
-                //printf("GNSS Uart3 Send:%s\r\n",recv_data);
-        //}
+        if (xQueueReceive(gnss_uart3_to_rx_queue,recv_data,portMAX_DELAY) == pdPASS)
+        {
+                printf("%s\r\n",recv_data);
+        }
+        #if ENABLE_GNSS_CHECK_LOG == 1
         if (xQueueReceive(gnss_uart3_to_rx_queue,recv_data,pdMS_TO_TICKS(1000)) == pdPASS)
         {
             if (strncmp(recv_data, "$GPGGA", 6) == 0 || strncmp(recv_data, "$GNGGA", 6) == 0)
@@ -2099,6 +2077,7 @@ void gnss_uart3_to_rx_task(void *arg)
            }
             last_report_tick = now;
         }
+        #endif
     }
 }
 void gnss_uart3_to_rx_task_init(void)
@@ -2114,43 +2093,6 @@ void gnss_uart3_to_rx_task_init(void)
 
 
 
-/*
-@fn:中断回调函数，处理 RX 的信息并且 发送到队列， UART2 用队列信息去发送给 GNSS
-*/
-void rx_to_gnss_uart2_done(struct __UART_HandleTypeDef *handle)
-{
-    BaseType_t higher_priority_task_woken = pdFALSE;
-    char ch = (char)uart3_rx_byte;
-    if( ch == '\r' || ch== '\n')
-    {
-        if(uart3_buf_len > 0)
-        {
-            uart3_buf[uart3_buf_len] = '\0';
-
-            if(rx_to_gnss_uart2_queue != NULL)
-            {
-                xQueueSendFromISR(rx_to_gnss_uart2_queue,uart3_buf,&higher_priority_task_woken);
-            }
-            uart3_buf_len = 0;
-        }
-    }
-    else
-    {
-        if(uart3_buf_len < AT_CMD_MAX_LEN -1 )
-        {
-            uart3_buf[uart3_buf_len++] = ch;
-        }
-        else
-        {
-            //指令过长 丢弃当前指令
-            uart3_buf_len = 0;
-        }
-    }
-    //继续接收中断
-    uart_receive_IT(handle, &uart3_rx_byte, 1);
-
-    portYIELD_FROM_ISR(higher_priority_task_woken);
-}
 void rx_to_gnss_uart2_task(void *arg)
 {
     struct __UART_HandleTypeDef *huart_handle = (struct UART_HandleTypeDef  *)arg;
@@ -2226,7 +2168,7 @@ void gnss_uart2_to_rx_task(void *arg)
 {
     //初始化接收数据缓冲区
     char recv_data[128];
-
+    #if ENABLE_GNSS_CHECK_LOG == 1
     uint32_t checked_count = 0;
     uint32_t pass_count = 0;
     uint32_t fail_count = 0;
@@ -2234,13 +2176,15 @@ void gnss_uart2_to_rx_task(void *arg)
     TickType_t start_tick = xTaskGetTickCount();
     TickType_t last_report_tick = start_tick;
     const TickType_t report_period = pdMS_TO_TICKS(60000);
+    #endif
     while(1)
     {
         //阻塞等待队列出现新的数据
-        //if (xQueueReceive(gnss_uart2_to_rx_queue,recv_data,portMAX_DELAY) == pdPASS)
-        //{
-                //printf("GNSS Uart2 Send:%s\r\n",recv_data);
-        //}
+        if (xQueueReceive(gnss_uart2_to_rx_queue,recv_data,portMAX_DELAY) == pdPASS)
+        {
+                printf("%s\r\n",recv_data);
+        }
+        #if ENABLE_GNSS_CHECK_LOG == 1
         if (xQueueReceive(gnss_uart2_to_rx_queue,recv_data,pdMS_TO_TICKS(1000)) == pdPASS)
         {
             if (strncmp(recv_data, "$GPGGA", 6) == 0 || strncmp(recv_data, "$GNGGA", 6) == 0)
@@ -2319,6 +2263,7 @@ void gnss_uart2_to_rx_task(void *arg)
             }
             last_report_tick = now;
         }
+        #endif
     }
         
 }

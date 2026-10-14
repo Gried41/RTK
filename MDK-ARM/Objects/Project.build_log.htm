@@ -27,23 +27,37 @@ Project File Date:  10/13/2026
 <h2>Output:</h2>
 *** Using Compiler 'V6.24', folder: 'D:\CODE\Keil MDK\keil5\ARM\ARMCLANG\Bin'
 Build target 'Project'
-../Src/app_at.c(523): warning: passing 'char[15]' to parameter of type 'const uint8_t *' (aka 'const unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
-  523 |             ME_SetLocalDeviceName("FR30xx_SDK_APP", 15);            
+../Src/mcu_gnss.c(17): warning: passing 'char[130]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+   17 |     uart_transmit(handle,uart2_tx_buf,(uint32_t)(uart2_tx_buf_len+1));
+      |                          ^~~~~~~~~~~~
+../../../../components/drivers/peripheral/Inc\driver_uart.h(403): note: passing argument to parameter 'fp_Data' here
+  403 | void uart_transmit(UART_HandleTypeDef *huart, uint8_t *fp_Data, uint32_t fu32_Size);
+      |                                                        ^
+../Src/mcu_gnss.c(27): warning: passing 'char[130]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+   27 |     uart_transmit(handle,uart1_tx_buf,(uint32_t)(uart1_tx_buf_len+1));
+      |                          ^~~~~~~~~~~~
+../../../../components/drivers/peripheral/Inc\driver_uart.h(403): note: passing argument to parameter 'fp_Data' here
+  403 | void uart_transmit(UART_HandleTypeDef *huart, uint8_t *fp_Data, uint32_t fu32_Size);
+      |                                                        ^
+2 warnings generated.
+compiling mcu_gnss.c...
+../Src/app_at.c(524): warning: passing 'char[15]' to parameter of type 'const uint8_t *' (aka 'const unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  524 |             ME_SetLocalDeviceName("FR30xx_SDK_APP", 15);            
       |                                   ^~~~~~~~~~~~~~~~
 ../../../../components/btdm/include\me_api.h(2693): note: passing argument to parameter 'name' here
  2693 | BtStatus ME_SetLocalDeviceName(const uint8_t *name, uint8_t len);
       |                                               ^
-../Src/app_at.c(1688): warning: address of array 'recv_data' will always evaluate to 'true' [-Wpointer-bool-conversion]
- 1688 |             if(recv_data)
+../Src/app_at.c(1683): warning: address of array 'recv_data' will always evaluate to 'true' [-Wpointer-bool-conversion]
+ 1683 |             if(recv_data)
       |             ~~ ^~~~~~~~~
-../Src/app_at.c(1745): warning: incompatible pointer types initializing 'struct __UART_HandleTypeDef *' with an expression of type 'struct UART_HandleTypeDef *' [-Wincompatible-pointer-types]
- 1745 |     struct __UART_HandleTypeDef *huart_handle = (struct UART_HandleTypeDef  *)arg;
+../Src/app_at.c(1740): warning: incompatible pointer types initializing 'struct __UART_HandleTypeDef *' with an expression of type 'struct UART_HandleTypeDef *' [-Wincompatible-pointer-types]
+ 1740 |     struct __UART_HandleTypeDef *huart_handle = (struct UART_HandleTypeDef  *)arg;
       |                                  ^              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../Src/app_at.c(1939): warning: incompatible pointer types initializing 'struct __UART_HandleTypeDef *' with an expression of type 'struct UART_HandleTypeDef *' [-Wincompatible-pointer-types]
- 1939 |     struct __UART_HandleTypeDef *huart_handle = (struct UART_HandleTypeDef  *)arg;
+../Src/app_at.c(1916): warning: incompatible pointer types initializing 'struct __UART_HandleTypeDef *' with an expression of type 'struct UART_HandleTypeDef *' [-Wincompatible-pointer-types]
+ 1916 |     struct __UART_HandleTypeDef *huart_handle = (struct UART_HandleTypeDef  *)arg;
       |                                  ^              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../Src/app_at.c(2156): warning: incompatible pointer types initializing 'struct __UART_HandleTypeDef *' with an expression of type 'struct UART_HandleTypeDef *' [-Wincompatible-pointer-types]
- 2156 |     struct __UART_HandleTypeDef *huart_handle = (struct UART_HandleTypeDef  *)arg;
+../Src/app_at.c(2098): warning: incompatible pointer types initializing 'struct __UART_HandleTypeDef *' with an expression of type 'struct UART_HandleTypeDef *' [-Wincompatible-pointer-types]
+ 2098 |     struct __UART_HandleTypeDef *huart_handle = (struct UART_HandleTypeDef  *)arg;
       |                                  ^              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 5 warnings generated.
 compiling app_at.c...
@@ -57,13 +71,13 @@ linking...
 ..\..\..\..\components\tools\keil\xip_flash_add_psram.sct(41): warning: L6329W: Pattern algorithm.o(RO) only matches removed unused sections.
 ..\..\..\..\components\tools\keil\xip_flash_add_psram.sct(42): warning: L6329W: Pattern codec.o(RO) only matches removed unused sections.
 ..\..\..\..\components\tools\keil\xip_flash_add_psram.sct(43): warning: L6329W: Pattern resample.o(RO) only matches removed unused sections.
-Program Size: Code=52436 RO-data=77020 RW-data=1624 ZI-data=90528  
+Program Size: Code=48224 RO-data=76276 RW-data=1624 ZI-data=88712  
 Finished: 0 information, 9 warning and 0 error messages.
 After Build - User command #1: "..\..\..\..\components\tools\keil\post_process.bat" "Project" "D:\tool\FR3068E_À¶ÑÀÈí¼þ\FR303x-SDK-v0.3.3\examples\application\btdm_audio\MDK-ARM\Objects\Project.axf" "D:\CODE\Keil MDK\keil5\ARM\ARMCLANG\include"
 20261014
-10:18:52.00
+15:29:26.37
 program target with file D:\tool\FR3068E_À¶ÑÀÈí¼þ\FR303x-SDK-v0.3.3\examples\application\btdm_audio\MDK-ARM\output/Project_burn.bin
-".\Objects\Project.axf" - 0 Error(s), 14 Warning(s).
+".\Objects\Project.axf" - 0 Error(s), 16 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -80,7 +94,7 @@ Package Vendor: Keil
 
    * Component: Keil::Compiler&ARM Compiler:I/O:STDERR&Breakpoint@1.2.0
       Source file:   Source/retarget_io.c
-Build Time Elapsed:  00:00:04
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>

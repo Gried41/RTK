@@ -48,6 +48,7 @@ AT_CmdType AT_Cmd_Parse(const char *cmd)
 */
 void Uart4_Send_AT_cmd(const char *cmd , struct __UART_HandleTypeDef *handle)
 {
+    /*
     switch(AT_Cmd_Parse(cmd))
     {
         case AT_CMD_MEMS_ON:
@@ -69,13 +70,12 @@ void Uart4_Send_AT_cmd(const char *cmd , struct __UART_HandleTypeDef *handle)
             printf("INVALID CMD...\r\n");
             return;
     }
+    */
     uint8_t uart4_tx_buf_len = strlen(cmd);
-
     memcpy(uart4_tx_buf,cmd,uart4_tx_buf_len);
     uart4_tx_buf[uart4_tx_buf_len++] = '\r';
     uart4_tx_buf[uart4_tx_buf_len] = '\n';
     uart_transmit(handle,uart4_tx_buf,(uint32_t)(uart4_tx_buf_len+1));
-
 }
 
 

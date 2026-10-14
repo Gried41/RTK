@@ -1865,9 +1865,9 @@
       <ActiveTab>0</ActiveTab>
       <Doc>
         <Name>..\Src\main.c</Name>
-        <ColumnNumber>32</ColumnNumber>
-        <TopLine>567</TopLine>
-        <CurrentLine>575</CurrentLine>
+        <ColumnNumber>0</ColumnNumber>
+        <TopLine>543</TopLine>
+        <CurrentLine>565</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
         <PaneID>0</PaneID>
@@ -1875,7 +1875,7 @@
       <Doc>
         <Name>..\Src\app_bt.c</Name>
         <ColumnNumber>0</ColumnNumber>
-        <TopLine>1809</TopLine>
+        <TopLine>1806</TopLine>
         <CurrentLine>1831</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
@@ -1911,7 +1911,7 @@
       <Doc>
         <Name>..\Src\user_bt.h</Name>
         <ColumnNumber>0</ColumnNumber>
-        <TopLine>240</TopLine>
+        <TopLine>237</TopLine>
         <CurrentLine>275</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
@@ -1974,7 +1974,7 @@
       <Doc>
         <Name>..\..\..\..\components\drivers\peripheral\Inc\driver_uart.h</Name>
         <ColumnNumber>0</ColumnNumber>
-        <TopLine>377</TopLine>
+        <TopLine>374</TopLine>
         <CurrentLine>409</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>

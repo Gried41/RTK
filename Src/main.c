@@ -457,14 +457,13 @@ int main( void )
     Uart3_handle.Init.Parity     = UART_PARITY_NONE;
     Uart3_handle.Init.FIFO_Mode  = UART_FIFO_ENABLE;
     Uart3_handle.TxCpltCallback  = NULL;
-    Uart3_handle.RxCpltCallback  = rx_to_gnss_uart3_done;  //RX 接收完毕后调用的回调函数
-
+    Uart3_handle.RxCpltCallback  = rx_to_gnss_done;  //RX 接收完毕后调用的回调函数
     uart_init(&Uart3_handle);
     NVIC_EnableIRQ(UART3_IRQn);                     //使能中断
     NVIC_SetPriority(UART3_IRQn, 4);
     Uart_Recv_IT(&Uart3_handle); //uart_receive_IT
     /*---------------------------------------------------------UART4 INIT--------------------------------------------------------------------------*/
-    /*UART4 :used for connect to IMU19(UART1) --PD0 PD1
+    /*UART4 :used for connect to IMU19(UART1) --PD0 PD1*/
     __SYSTEM_GPIOD_CLK_ENABLE();
     //configure PD0 and PD1 to UART4 function
     gpio_config.Pin = GPIO_PIN_0 | GPIO_PIN_1;
@@ -505,14 +504,6 @@ int main( void )
     gpio_config.Pull = GPIO_PULLUP;
     gpio_config.Alternate = GPIO_FUNCTION_1;
     gpio_init(GPIOB, &gpio_config);
-
-    //将GNSS_PWR_EN 拉高使能 PD2;
-    gpio_config.Pin = GPIO_PIN_2;
-    gpio_config.Mode = GPIO_MODE_OUTPUT_PP;
-    gpio_config.Pull = GPIO_NOPULL;
-    gpio_init(GPIOD, &gpio_config);
-    gpio_write_pin(GPIOD, GPIO_PIN_2, GPIO_PIN_SET);
-
     //UART2 configure
     __SYSTEM_UART2_CLK_ENABLE();
     Uart2_handle.UARTx = UART2;
@@ -527,8 +518,6 @@ int main( void )
     NVIC_EnableIRQ(UART2_IRQn);                     //使能中断
     NVIC_SetPriority(UART2_IRQn, 4);
     Uart_Recv_IT(&Uart2_handle); //uart_receive_IT
-
-
     /*-------------------------------------------------UART1 INIT-----------------------------------------------------------------------------*/
     __SYSTEM_GPIOA_CLK_ENABLE();
     __SYSTEM_GPIOD_CLK_ENABLE();    //GNSS 使能引脚需要 GPIOD 时钟
@@ -538,14 +527,12 @@ int main( void )
     gpio_config.Pull = GPIO_PULLUP;
     gpio_config.Alternate = GPIO_FUNCTION_1;
     gpio_init(GPIOA, &gpio_config);
-
     //将GNSS_PWR_EN 拉高使能 PD2;
     gpio_config.Pin = GPIO_PIN_2;
     gpio_config.Mode = GPIO_MODE_OUTPUT_PP;
     gpio_config.Pull = GPIO_NOPULL;
     gpio_init(GPIOD, &gpio_config);
     gpio_write_pin(GPIOD, GPIO_PIN_2, GPIO_PIN_SET);
-
     //UART1 configure
     __SYSTEM_UART1_CLK_ENABLE();
     Uart1_handle.UARTx = UART1;
@@ -562,10 +549,8 @@ int main( void )
     Uart_Recv_IT(&Uart1_handle); //uart_receive_IT
 
 
-
+    //printf打印互斥锁初始化 
     uart_printf_mutex_init();
-
-
     /* do calibration, get current RC frequency */
     __SYSTEM_CALI_CLK_ENABLE();
     cali_handle.mode = CALI_UP_MODE_NORMAL;
@@ -577,8 +562,6 @@ int main( void )
     NVIC_SetPriority(CALI_IRQn, 4);
     NVIC_EnableIRQ(CALI_IRQn);
     
-
-
     /* init flashdb to store user data */
     flashdb_init();
 
@@ -596,25 +579,18 @@ int main( void )
     }
     srand(rand_num);
     printf("flash db get rand num: %x\r\n",rand_num);
-        /*
-            程序可以while1循环一直打印，不是printf队列满的问题 
-        */
     /* Create tasks */
 #if ENABLE_RTOS_MONITOR == 1
     xTaskCreate(monitor_task, "monitor", MONITOR_TASK_STACK_SIZE, NULL, MONITOR_TASK_PRIORITY, &monitor_task_handle);
 #endif
 
     /* create application task */
-    //uart_spp_task_init();
-    //app_task_init();
-    //My_task_init(&Uart4_handle);    
-    //imu_to_rx_task_init(); 
-
     rx_to_gnss_uart3_task_init(&Uart2_handle);
     rx_to_gnss_uart2_task_init(&Uart1_handle);
+    rx_to_imu_task_init(&Uart4_handle);
     gnss_uart2_to_rx_task_init();
     gnss_uart3_to_rx_task_init();
-    //gnss_uart3_to_rx_task_init();
+    imu_to_rx_task_init();
     //audio_scene_init(AUDIO_SCENE_TASK_STACK_SIZE, AUDIO_SCENE_TASK_PRIORITY);
 
 
