@@ -415,6 +415,7 @@ __RAM_CODE void user_entry_after_sleep_user(void)
 
 int main( void )
 {
+    //test git pull
     GPIO_InitTypeDef gpio_config;
     // UART_HandleTypeDef dsp_uart_handle;
     uint32_t error;
